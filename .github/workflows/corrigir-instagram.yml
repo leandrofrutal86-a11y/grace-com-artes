@@ -1,0 +1,33 @@
+name: Corrigir link do Instagram
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/corrigir-instagram.yml'
+permissions:
+  contents: write
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Atualizar link no catalogo
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          novo = 'https://www.instagram.com/grace.com_arte2012?rpxt=MWwzdWszd3Fhc3Iybg=='
+          import re
+          s, n = re.subn(r'https?://(?:www\.)?instagram\.com/gracecom_arte2012/?', lambda _: novo, s)
+          print('Links corrigidos:', n)
+          if n == 0:
+              raise SystemExit('Link anterior nao encontrado')
+          p.write_text(s, encoding='utf-8')
+          PY
+      - name: Publicar correcao
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || (git commit -m "Corrigir Instagram do catalogo Grace" && git push)
