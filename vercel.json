@@ -1,0 +1,14 @@
+{
+  "framework": null,
+  "cleanUrls": false,
+  "rewrites": [
+    {
+      "source": "/index-:numero(\\d+).html",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/index_:numero(\\d+).html",
+      "destination": "/index.html"
+    }
+  ]
+}
