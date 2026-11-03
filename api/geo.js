@@ -1,0 +1,1 @@
+module.exports=(req,res)=>{res.setHeader('Cache-Control','no-store');res.setHeader('Access-Control-Allow-Origin','*');res.status(200).json({city:decodeURIComponent(req.headers['x-vercel-ip-city']||''),region:req.headers['x-vercel-ip-country-region']||'',country:req.headers['x-vercel-ip-country']||''})};
