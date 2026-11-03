@@ -1,0 +1,102 @@
+{
+  "settings": {
+    "title": "Grace.com_artes",
+    "eyebrow": "Artes que iluminam histórias",
+    "subtitle": "Luminárias decorativas artesanais desde 2012\nPeças feitas especialmente para você",
+    "notice": "Produção sob encomenda • 7 dias úteis • Apenas lâmpada fria",
+    "heading": "Nossas luminárias",
+    "whatsapp": "5534998796905",
+    "instagram": "https://www.instagram.com/grace.com_arte2012/",
+    "pix": "graceluminarias2012@gmail.com",
+    "pixName": "Grace Kele Moreira",
+    "footer": "Grace.com_artes • Luminárias decorativas desde 2012",
+    "email": "graceluminarias2012@gmail.com",
+    "layout": "classic",
+    "primary": "#5a2b17",
+    "accent": "#c89539",
+    "background": "#fffaf1"
+  },
+  "products": [
+    {
+      "id": "p0",
+      "name": "Virgem Maria",
+      "model": "Modelo 1",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:0",
+      "visible": true
+    },
+    {
+      "id": "p1",
+      "name": "Nossa Senhora Aparecida",
+      "model": "",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:1",
+      "visible": true
+    },
+    {
+      "id": "p2",
+      "name": "Virgem Maria",
+      "model": "Modelo 2",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:2",
+      "visible": true
+    },
+    {
+      "id": "p3",
+      "name": "Buddha",
+      "model": "",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:3",
+      "visible": true
+    },
+    {
+      "id": "p4",
+      "name": "Fada",
+      "model": "Modelo 1",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:4",
+      "visible": true
+    },
+    {
+      "id": "p5",
+      "name": "Barco à Vela",
+      "model": "",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:5",
+      "visible": true
+    },
+    {
+      "id": "p6",
+      "name": "São Miguel Arcanjo",
+      "model": "",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:6",
+      "visible": true
+    },
+    {
+      "id": "p7",
+      "name": "Floral",
+      "model": "Modelo 1",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:7",
+      "visible": true
+    },
+    {
+      "id": "p8",
+      "name": "Anjo",
+      "model": "Modelo 1",
+      "price": "R$ 185,00",
+      "description": "Peça tubular de 100 mm de diâmetro e 50 cm de altura. Base hexagonal em madeira com fiação embutida.",
+      "image_url": "original:8",
+      "visible": true
+    }
+  ]
+}
