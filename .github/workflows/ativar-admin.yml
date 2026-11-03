@@ -1,0 +1,39 @@
+name: Ativar painel administrativo Grace
+on:
+  push:
+    paths:
+      - '.github/workflows/ativar-admin.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  ativar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Incluir atualizacoes no catalogo e exportar fotos originais
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,base64
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          a=s.index('const products=')+len('const products=')
+          b=s.index(';document.getElementById',a)
+          photos=json.loads(s[a:b])
+          for i,item in enumerate(photos):
+              data=item['src']
+              if data.startswith('data:image/jpeg;base64,'):
+                  Path('original-'+str(i)+'.jpg').write_bytes(base64.b64decode(data.split(',',1)[1]))
+          tag='<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script><script defer src="/grace-live.js"></script>'
+          if '/grace-live.js' not in s:
+              s=s.replace('</body>',tag+'</body>')
+              p.write_text(s,encoding='utf-8')
+          print('Imagens originais preservadas:',len(photos))
+          PY
+      - name: Publicar arquivos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html original-*.jpg
+          git diff --cached --quiet || (git commit -m "Ativar administrador e preservar fotos originais" && git push)
