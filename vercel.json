@@ -3,6 +3,10 @@
   "cleanUrls": false,
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/api/site"
+    },
+    {
       "source": "/index-:numero(\\d+).html",
       "destination": "/index.html"
     },
